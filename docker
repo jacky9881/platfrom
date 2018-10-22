@@ -6,3 +6,6 @@ docker exec -it mysqldocker bash
 
 启动Tomcat容器
 docker run  -p 9090:8080 --name dockertomcat tomcat
+
+把war包拷贝到tomcat容器中
+docker cp /Users/huangwei/Desktop/demo.war dockertomcat:/usr/local/tomcat/webapps
