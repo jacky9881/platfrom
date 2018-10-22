@@ -3,3 +3,6 @@ docker run --name mysqldocker -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysq
 
 进入My SQL容器查看My SQL运行状况
 docker exec -it mysqldocker bash
+
+启动Tomcat容器
+docker run  -p 9090:8080 --name dockertomcat tomcat
