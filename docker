@@ -1,2 +1,5 @@
 启动My SQL容器
 docker run --name mysqldocker -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6.35
+
+进入My SQL容器查看My SQL运行状况
+docker exec -it mysqldocker bash
