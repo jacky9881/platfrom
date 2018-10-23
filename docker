@@ -9,3 +9,12 @@ docker run  -p 9090:8080 --name dockertomcat tomcat
 
 把war包拷贝到tomcat容器中
 docker cp /Users/huangwei/Desktop/demo.war dockertomcat:/usr/local/tomcat/webapps
+
+查看所有容器
+docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS                    NAMES
+8ee2cb0175b1        tomcat              "catalina.sh run"        14 hours ago        Exited (0) 13 hours ago                              dockertomcat
+47064db9bfd6        mysql:5.6.35        "docker-entrypoint.sh"   14 hours ago        Exited (1) 11 seconds ago   0.0.0.0:3310->3306/tcp   mysqldocker
+
+启动指定的容器
+docker start 47064db9bfd6
