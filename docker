@@ -18,3 +18,9 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 启动指定的容器
 docker start 47064db9bfd6
+
+查看容器的IP地址
+1.进入容器，运行如下命令
+cat /etc/hosts
+2.docker inspect 47064db9bfd6
+3.docker inspect --format '{{ .NetworkSettings.IPAddress }}' 47064db9bfd6 
