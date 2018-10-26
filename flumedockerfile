@@ -1,1 +1,11 @@
+FROM jdk-8u191:20181026
+
+MAINTAINER  jacky9881@163.com
+
+RUN mkdir /opt/flume
+RUN wget -qO- \
+  http://mirror.bit.edu.cn/apache/flume/1.8.0/apache-flume-1.8.0-bin.tar.gz \
+  | tar zxvf - -C /opt/flume --strip 1
+
+ENV PATH /opt/flume/bin:$PATH
 
