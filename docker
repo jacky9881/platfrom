@@ -38,3 +38,16 @@ docker build -t flume-180:20181026 . -f flumedockerfile
 # -t: 为容器重新分配一个伪输入终端，通常与 -i 同时使用；
 docker run -it flume-180:20181026 /bin/bash
 docker run -p 444:44444 -t flume:20181026  # echo foo bar baz | nc localhost 444
+
+#删除旧镜像的时候，出现依赖问题的处理
+#1.保存新镜像
+docker save -o flume.tar flume:20181026
+#2.删除新旧镜像
+docker rmi 79bbe4138a93 
+docker rmi 9cdb65857587 
+docker rmi c6f712995450
+#3.load新镜像
+docker load -i ./flume.tar
+
+＃运行JDK镜像时候
+＃运行JDK镜像
