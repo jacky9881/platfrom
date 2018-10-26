@@ -24,3 +24,24 @@ docker start 47064db9bfd6
 cat /etc/hosts
 2.docker inspect 47064db9bfd6
 3.docker inspect --format '{{ .NetworkSettings.IPAddress }}' 47064db9bfd6 
+
+
+＃＃基于Tomcat的Image制做Flume Image
+新建目录docker 
+mkdir docker
+cd ./docker
+vi Dockerfile  #内容如下
+###########################################################################
+FROM tomcat
+
+RUN mkdir /opt/flume
+RUN wget -qO- \
+  http://mirror.bit.edu.cn/apache/flume/1.8.0/apache-flume-1.8.0-bin.tar.gz \
+  | tar zxvf - -C /opt/flume --strip 1
+
+ENV PATH /opt/flume/bin:$PATH
+############################################################################
+
+通过以上文件，构建flume镜像
+docker build -t flume .
+
