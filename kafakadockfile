@@ -1,1 +1,6 @@
 
+FROM flume:20181026
+
+MAINTAINER  jacky9881@163.com
+
+ADD kafka_2.11-2.0.0.tar.gz /opt
