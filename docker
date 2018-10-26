@@ -33,4 +33,6 @@ docker run -d -it jdk-8u191:20181026 /bin/bash
 ##制做Flume1.8镜像
 docker build -t flume-180:20181026 . -f flumedockerfile
 ＃运行Flume镜像
-docker run -d -it flume-180:20181026 /bin/bash
+# -d: 后台运行容器，并返回容器ID
+# -i: 以交互模式运行容器，通常与 -t 同时使用；
+docker run -it flume-180:20181026 /bin/bash
