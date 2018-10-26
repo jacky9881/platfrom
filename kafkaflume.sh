@@ -8,7 +8,7 @@
 #启动消费Topic
 /opt/kafka_2.11-2.0.0/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopic --from-beginning --zookeeper master
 #启动Flume
-/opt/apache-flume-1.8.0-bin/bin/flume-ng agent -n docker -c conf -f /var/tmp/kafka-example.conf -Dflume.root.logger=INFO,console
+/opt/apache-flume-1.8.0-bin/bin/flume-ng agent -n docker -c conf -f conf/kafka-example.conf -Dflume.root.logger=INFO,console
 
 
 
