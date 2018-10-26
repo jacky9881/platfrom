@@ -54,3 +54,5 @@ bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 ＃验证启动状态: jps
 #启动kafka
 bin/kafka-server-start.sh -daemon config/server.properties
+#启动Flume
+
