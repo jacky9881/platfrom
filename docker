@@ -30,6 +30,11 @@ docker build -t jdk-8u191:20181026 . -f jdkdockerfile
 ＃运行JDK镜像
 docker run -d -it jdk-8u191:20181026 /bin/bash
 
+##制做Flume1.8镜像
+docker build -t flume-180:20181026 . -f flumedockerfile
+＃运行Flume镜像
+docker run -d -it flume-180:20181026 /bin/bash
+
 
 ＃＃基于Tomcat的Image制做Flume Image
 新建目录docker 
