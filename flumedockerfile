@@ -2,8 +2,8 @@ FROM jdk-8u191:20181026
 
 MAINTAINER  jacky9881@163.com
 
-RUN mkdir /opt/flume
-ADD apache-flume-1.8.0-bin.tar.gz /opt/flume
+RUN mkdir /opt
+ADD apache-flume-1.8.0-bin.tar.gz /opt
 
-ENV PATH /opt/flume/bin:$PATH
+ENV PATH /opt/apache-flume-1.8.0-bin/bin:$PATH
 
