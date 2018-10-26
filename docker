@@ -49,5 +49,6 @@ docker rmi c6f712995450
 #3.load新镜像
 docker load -i ./flume.tar
 
-＃运行JDK镜像时候
-＃运行JDK镜像
+＃安装完kafaka之后，启动zookeeper
+bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
+＃验证启动状态: jps
