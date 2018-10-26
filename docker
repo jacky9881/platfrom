@@ -25,6 +25,9 @@ cat /etc/hosts
 2.docker inspect 47064db9bfd6
 3.docker inspect --format '{{ .NetworkSettings.IPAddress }}' 47064db9bfd6 
 
+##制做JDK1.8镜像
+docker build -t jdk-8u144：20181026 . -f jdkdockerfile
+
 
 ＃＃基于Tomcat的Image制做Flume Image
 新建目录docker 
