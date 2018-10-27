@@ -16,5 +16,7 @@ ADD kafka-example.conf.template /var/tmp/kafka-example.conf
 ADD kafka_2.11-2.0.0.tar /opt
 
 ADD apache-storm-1.2.2.tar /opt
+ENV STORM_HOME /opt/apache-storm-1.2.2/bin
+ENV PATH $PATH:$STORM_HOME/bin
 
 EXPOSE 44444  #测试用，可以不需要
