@@ -19,5 +19,16 @@
 #启动Flume
 /opt/apache-flume-1.8.0-bin/bin/flume-ng agent -n docker -c conf -f conf/kafka-example.conf -Dflume.root.logger=INFO,console
 
+#启动Storm Nimbus
+/opt/apache-storm-1.2.2/bin/storm nimbus
+
+#启动Storm Supervisor
+/opt/apache-storm-1.2.2/bin/storm supervisor
+
+#启动Storm UI
+/opt/apache-storm-1.2.2/bin/storm ui
+
+
+
 
 
