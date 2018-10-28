@@ -12,10 +12,12 @@ ENV PATH $PATH:$JAVA_HOME/bin
 ADD apache-flume-1.8.0-bin.tar /opt
 ENV PATH /opt/apache-flume-1.8.0-bin/bin:$PATH
 
-ADD kafka-example.conf.template /var/tmp/kafka-example.conf
 ADD kafka_2.11-2.0.0.tar /opt
+ADD kafka-example.conf.template /opt/apache-flume-1.8.0-bin/conf/kafka-example.conf
 
 ADD apache-storm-1.2.2.tar /opt
+ADD storm.yaml /opt/apache-storm-1.2.2/conf/storm.yaml
+
 ENV STORM_HOME /opt/apache-storm-1.2.2/bin
 ENV PATH $PATH:$STORM_HOME/bin
 
